@@ -1,0 +1,26 @@
+/* Basic CSS Reset/Global Styles */
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%; /* Prevent text size adjustment on iOS */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; /* Inherit box-sizing for all elements */
+}
+
+body {
+  margin: 0; /* Remove default body margin */
+  line-height: 1.5; /* Improve readability */
+  -webkit-font-smoothing: antialiased; /* Better font rendering on macOS/iOS */
+  -moz-osx-font-smoothing: grayscale; /* Better font rendering on macOS/iOS */
+  /* Font family is handled by public/index.html via Google Fonts and Tailwind */
+}
+
+/* Optional: Add any custom utility classes here if needed */
+/* Example:
+.custom-shadow {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+*/
