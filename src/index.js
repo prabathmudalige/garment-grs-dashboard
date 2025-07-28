@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'; // Import from 'react-dom/client' for React 18+
-import './index.css'; // You might not have this, but it's common. If it causes an error, you can remove this line.
+import './index.css'; // This line imports your global CSS styles
 import App from './App'; // Import your main App component
 
 // Get the root element from public/index.html
