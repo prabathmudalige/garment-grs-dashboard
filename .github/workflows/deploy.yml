@@ -8,6 +8,10 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest # GitHub's virtual environment (Linux)
+    permissions: # NEW: Add permissions for the GITHUB_TOKEN
+      contents: write # Needed for actions/checkout to write to the repo
+      pages: write    # Needed for peaceiris/actions-gh-pages to push to gh-pages
+      id-token: write # Needed for OIDC if you use it, good practice to include
 
     steps:
       - name: Checkout code
@@ -21,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: npm install # Install your project's npm dependencies
 
-      - name: Fix react-scripts permissions # NEW STEP ADDED
+      - name: Fix react-scripts permissions
         run: chmod +x node_modules/.bin/react-scripts # Give execute permission to react-scripts
 
       - name: Build React App
