@@ -29,7 +29,7 @@ jobs:
         run: chmod +x node_modules/.bin/react-scripts # Give execute permission to react-scripts
 
       - name: Build React App
-        run: npm run build # Build your React application for production
+        run: CI=false npm run build -- --public-url=/garment-grs-dashboard/ # Modified: Set PUBLIC_URL for correct asset paths
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3 # Action to deploy to gh-pages branch
